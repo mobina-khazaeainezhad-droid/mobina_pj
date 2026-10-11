@@ -1,4 +1,3 @@
-
 from django.urls import path
 from test_app.views import *
 
@@ -8,5 +7,6 @@ urlpatterns = [
     path('',index_view,name='index'),
     path('about/',about_view,name='about'),
     path('contact/',contact_view,name='contact'),
-    path('test2/', test2_view, name='test2')
+    path('test2/', test2_view, name='test2'),
+    path('newsletter', newsletter_view, name='newsletter'),
 ]

@@ -1,5 +1,5 @@
 from django import forms
-from test_app.models import Contact
+from test_app.models import Contact,Newsletter
 
 
 class NameForm(forms.Form):
@@ -14,3 +14,11 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = '__all__'
+        
+        
+class NewsletterForm(forms.ModelForm):
+    
+    class Meta:
+        model = Newsletter
+        fields = '__all__'
+                
