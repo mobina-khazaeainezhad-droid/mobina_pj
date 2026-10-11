@@ -1,7 +1,16 @@
-from django import forms 
+from django import forms
+from test_app.models import Contact
+
 
 class NameForm(forms.Form):
     name = forms.CharField(max_length=255)
     email = forms.EmailField()
     subject = forms.CharField(max_length=255)
     message = forms.CharField(widget=forms.Textarea)
+
+
+class ContactForm(forms.ModelForm):
+
+    class Meta:
+        model = Contact
+        fields = '__all__'

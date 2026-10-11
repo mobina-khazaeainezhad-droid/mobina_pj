@@ -13,7 +13,7 @@
           <p class="text-white">There is a moment in the life of any aspiring astronomer that it is time to buy that first</p>
         </div>
       </div>
-    </div>
+    </div>ش
   </section>
   <!-- End banner Area -->
 
@@ -146,8 +146,8 @@
         <div class="col-lg-4 sidebar-widgets">
           <div class="widget-wrap">
             <div class="single-sidebar-widget search-widget">
-              <form class="search-form" action="#">
-                <input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" />
+              <form class="search-form" action="{% url 'blog:search' %}" method="get">
+                <input placeholder="Search Posts" name="s" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" />
                 <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </div>

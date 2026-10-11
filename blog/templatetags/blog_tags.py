@@ -38,3 +38,9 @@ def postcategories():
         cat_dict[name]=posts.filter(category=name).count()
     return {'categories':cat_dict}
     
+
+# 7تمرین index.html 
+@register.simple_tag
+def latest_posts(count=6):
+    posts = Post.objects.filter(status=1).order_by('-published_date', '-created_date')[:count]
+    return {'posts': posts}
